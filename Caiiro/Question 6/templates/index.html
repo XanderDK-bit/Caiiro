@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caiiro Live in Action</title>
+    <style>
+        body { background: #0f172a; color: #f8fafc; font-family: sans-serif; text-align: center; margin-top: 50px; }
+        h1 { color: #38bdf8; text-shadow: 0 0 15px rgba(56,189,248,0.5); }
+        .mixer-deck { width: 700px; height: 350px; background: #1e293b; border: 3px solid #38bdf8; border-radius: 12px; margin: 30px auto; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .turntable { width: 120px; height: 120px; background: #334155; border: 4px solid #cbd5e1; border-radius: 50%; position: absolute; top: 100px; animation: spin 3s linear infinite; }
+        .left-deck { left: 80px; }
+        .right-deck { right: 80px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .dj-avatar { width: 90px; height: 90px; background: #f59e0b; border-radius: 50%; position: absolute; top: 40px; left: 305px; border: 3px solid #fff; }
+        .equalizer { display: flex; justify-content: center; gap: 8px; position: absolute; bottom: 30px; width: 100%; }
+        .bar { width: 12px; background: #ec4899; animation: bounce 0.8s ease-in-out infinite alternate; border-radius: 4px; }
+        .bar:nth-child(2) { animation-delay: 0.2s; background: #8b5cf6; }
+        .bar:nth-child(3) { animation-delay: 0.4s; background: #38bdf8; }
+        .bar:nth-child(4) { animation-delay: 0.1s; background: #10b981; }
+        @keyframes bounce { 0% { height: 15px; } 100% { height: 80px; } }
+    </style>
+</head>
+<body>
+    <h1>CAIIRO: AFRO-TECH LIVE MIX</h1>
+    <p>Running live inside your Kubernetes Cluster (`cna` profile)</p>
+    <div class="mixer-deck">
+        <div class="dj-avatar"></div>
+        <div class="turntable left-deck"></div>
+        <div class="turntable right-deck"></div>
+        <div class="equalizer">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+</body>
+</html>
